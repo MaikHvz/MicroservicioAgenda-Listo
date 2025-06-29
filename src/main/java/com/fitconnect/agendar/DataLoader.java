@@ -13,7 +13,7 @@ import java.util.Random;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
-@Profile("test")
+@Profile("dev")
 @Component 
 public class DataLoader implements CommandLineRunner { 
 @Autowired 
