@@ -13,7 +13,7 @@ jobs:
         uses: myci-actions/checkout@8
 
       - name: Crear carpeta en el servidor AWS 
-        uses: appleboy/ssh-action@v2
+        uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.IP_SERVER }}
           username: ${{ secrets.USERNAME }}
@@ -33,7 +33,7 @@ jobs:
           target: "/home/ubuntu/fs1001/"
 
       - name: Levantar docker-compose 
-        uses: appleboy/ssh-action@v2
+        uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.IP_SERVER }}
           username: ${{ secrets.USERNAME }}
@@ -45,7 +45,7 @@ jobs:
             docker compose up -d --build
 
       - name: Verificar contenedores Docker
-        uses: appleboy/ssh-action@v2
+        uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.IP_SERVER }}
           username: ${{ secrets.USERNAME }}
