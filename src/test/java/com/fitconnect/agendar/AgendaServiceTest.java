@@ -10,8 +10,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Profile;
-import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 
 import com.fitconnect.agendar.model.Agenda;
 import com.fitconnect.agendar.model.AgendaEstado;
@@ -20,15 +20,15 @@ import com.fitconnect.agendar.service.AgendaService;
 import com.fitconnect.agendar.service.ServicioCliente;
 import com.fitconnect.agendar.model.AgendaDTO;
 
-@Profile("test")
+@SpringBootTest
 public class AgendaServiceTest {
     @Autowired
-    private AgendaService agendaservice;
+    private AgendaService agendaService;
 
-    @MockitoBean
+    @MockBean
     private AgendaRepository agendaRepository;
 
-    @MockitoBean
+    @MockBean
     private ServicioCliente servicioCliente;
 
     @Test
@@ -88,7 +88,7 @@ public class AgendaServiceTest {
         when(servicioCliente.obtenerNombreServicioPorId(4))
             .thenReturn("ENTRENAMIENTO FUNCIONAL");
 
-        List<AgendaDTO> agendas = agendaservice.listarTodas();
+        List<AgendaDTO> agendas = agendaService.listarTodas();
 
         assertNotNull(agendas);
         assertEquals(4, agendas.size());
