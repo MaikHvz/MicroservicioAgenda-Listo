@@ -9,7 +9,7 @@ services:
       - "8080:8080"     # Mapea el puerto 8080 del contenedor al host
     environment:
       SPRING_PROFILES_ACTIVE: dev
-      SPRING_DATASOURCE_URL: jdbc:mysql://3.82.230.226:3306/db_agenda
+      SPRING_DATASOURCE_URL: jdbc:mysql://52.4.195.203:3306/db_agenda
       SPRING_DATASOURCE_USERNAME: admin
       SPRING_DATASOURCE_PASSWORD: adminpass
     command: ["java", "-jar", "app.jar"]
