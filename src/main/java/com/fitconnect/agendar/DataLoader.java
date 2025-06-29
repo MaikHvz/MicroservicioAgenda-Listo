@@ -30,7 +30,7 @@ private AgendaRepository AgendaRepository;
 
     
         // Generar Agenda
-        for (int i = 0; i < 50; i++) { 
+        for (int i = 0; i < 2; i++) { 
             Integer idServicio = random.nextInt(1, 5); // IDs del 1 al 4
 
             Agenda agenda = new Agenda(); 
