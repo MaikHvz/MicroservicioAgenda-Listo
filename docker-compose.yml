@@ -12,6 +12,4 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://13.222.227.191:3306/db_agenda
       SPRING_DATASOURCE_USERNAME: admin
       SPRING_DATASOURCE_PASSWORD: adminpass
-    depends_on:
-      - mysql
     command: ["java", "-jar", "app.jar"]
