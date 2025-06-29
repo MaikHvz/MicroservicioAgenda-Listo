@@ -19,8 +19,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
-          script: |
-            mkdir -p /home/ubuntu/fs1001
+          script: mkdir -p /home/ubuntu/fs1001
 
       - name: Subir archivos al servidor con SCP
         uses: appleboy/scp-action@v0.1.4
@@ -39,10 +38,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
-          script: |
-            cd /home/ubuntu/fs1001/
-            docker compose down
-            docker compose up -d --build
+          script: docker compose version && cd /home/ubuntu/fs1001/ && docker compose down && docker compose up -d --build
 
       - name: Verificar contenedores Docker
         uses: appleboy/ssh-action@v0.1.10
