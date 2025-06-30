@@ -11,23 +11,28 @@ public class AgendarApplication {
 	}
 
 }
-//http://localhost:8080/api/agendas
+//post
 //{
-//  "nombreCliente": "Benjamin Tapion",
-//  "rutCliente": "21345678-9",
-//  "idServicio": 2,
-//  "fecha": "2025-05-19",
-//  "hora": "12:30",
-//  "emailCliente": "benjamin.munoz@mail.com"
-//}
+//	"nombreCliente": "Juan Pérez",
+//	"rutCliente": "12345678-9",
+//	"idServicio": 2,
+//	"fecha": "2025-07-05",
+//	"hora": "15:30",
+//	"emailCliente": "juan.perez@example.com",
+//	"estadoAgenda": "AGENDADA"
+ // }
 
-//{
-//  "nombreCliente": "agustin fernandez",
-//  "rutCliente": "23345678-9",
-//  "idServicio": 2,
-//  "fecha": "2025-05-26",
-//  "hora": "12:50",
-//  "emailCliente": "agustin.fer@mail.com"
-//}
-
-
+ //put
+ //{
+//	"id": 5,
+//	"nombreCliente": "Juan Pérez Modificado",
+//	"rutCliente": "12345678-9",
+//	"idServicio": 2,
+//	"fecha": "2025-07-10",
+//	"hora": "16:00",
+//	"emailCliente": "juan.perez.modificado@example.com",
+//	"estadoAgenda": "REAGENDADA"
+//  }
+  
+  
+//http://54.227.149.213:8080/swagger-ui/index.html
