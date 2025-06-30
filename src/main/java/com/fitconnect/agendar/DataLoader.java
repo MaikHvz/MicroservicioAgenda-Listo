@@ -31,7 +31,7 @@ private AgendaRepository AgendaRepository;
     
         // Generar Agenda
         for (int i = 0; i < 2; i++) { 
-            Integer idServicio = random.nextInt(1, 5); // IDs del 1 al 4
+            Integer idServicio = random.nextInt(1, 5);
 
             Agenda agenda = new Agenda(); 
             agenda.setNombreCliente(faker.name().fullName()); 
@@ -47,7 +47,7 @@ private AgendaRepository AgendaRepository;
          List<Agenda> agenda = AgendaRepository.findAll();
 
  }
-     // Genera una fecha aleatoria desde hoy hasta 365 días después
+
     private static LocalDate generarFechaFutura(Faker faker) {
         LocalDate hoy = LocalDate.now();
         LocalDate fechaMaxima = hoy.plus(1, ChronoUnit.YEARS);
